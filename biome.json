@@ -1,0 +1,72 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
+  "css": {
+    "formatter": {
+      "enabled": true
+    },
+    "parser": {
+      "cssModules": true,
+      "tailwindDirectives": true
+    }
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "**",
+      "!lib/components/ui",
+      "!node_modules",
+      "!.next",
+      "!external",
+      "!public"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "asNeeded",
+      "expand": "auto",
+      "indentStyle": "space",
+      "indentWidth": 2,
+      "jsxQuoteStyle": "double",
+      "lineWidth": 120,
+      "quoteStyle": "single",
+      "semicolons": "asNeeded"
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "complexity": {
+        "useLiteralKeys": "off"
+      },
+      "correctness": {
+        "noUndeclaredVariables": "warn",
+        "noUnusedImports": "warn",
+        "noUnusedVariables": "error"
+      },
+      "style": {
+        "useConst": "warn",
+        "useEnumInitializers": "off",
+        "useImportType": "info",
+        "useSelfClosingElements": "warn",
+        "useTemplate": "warn"
+      },
+      "suspicious": {
+        "noUnknownAtRules": "off",
+        "noVar": "error"
+      }
+    }
+  },
+  "root": true,
+  "vcs": {
+    "clientKind": "git",
+    "enabled": false,
+    "useIgnoreFile": false
+  }
+}

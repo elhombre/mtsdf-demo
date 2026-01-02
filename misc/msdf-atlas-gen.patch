@@ -1,0 +1,13 @@
+diff --git a/msdf-atlas-gen/main.cpp b/msdf-atlas-gen/main.cpp
+index 3fc419d..f3f0e3f 100644
+--- a/msdf-atlas-gen/main.cpp
++++ b/msdf-atlas-gen/main.cpp
+@@ -335,7 +335,7 @@ static bool makeAtlas(const std::vector<GlyphGeometry> &glyphs, const std::vecto
+     generator.setAttributes(config.generatorAttributes);
+     generator.setThreadCount(config.threadCount);
+     generator.generate(glyphs.data(), glyphs.size());
+-    msdfgen::BitmapConstSection<T, N> bitmap = (msdfgen::BitmapConstSection<T, N>) generator.atlasStorage();
++    msdfgen::BitmapConstSection<T, N> bitmap = generator.atlasStorage().operator msdfgen::BitmapConstSection<T, N>();
+     bitmap.reorient(config.yDirection);
+ 
+     bool success = true;

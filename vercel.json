@@ -1,0 +1,5 @@
+{
+  "framework": "nextjs",
+  "installCommand": "dnf install -y cmake freetype freetype-devel pkgconf-pkg-config && npm ci",
+  "buildCommand": "npm run build"
+}
